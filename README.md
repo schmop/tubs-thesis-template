@@ -2,6 +2,8 @@
 
 This is the [Typst](https://typst.app/) template for a thesis that adheres to the [Corporate Design der TU Braunschweig](https://www.tu-braunschweig.de/presse/corporate-design).
 
+![Preview of the template in action](thumbnail.png)
+
 ## Installation
 
 First install this package as a local typst package, as described [here](https://github.com/typst/packages/blob/ddc764a5549bd20ac1bc06ce5002ae82f231f372/README.md#local-packages).
