@@ -1,10 +1,9 @@
-#import "components.typ": body-font, variable-pagebreak
+#import "components.typ": variable-pagebreak
 
 #let abstract(lang: str, body: content) = {
   set text(lang: lang)
 
   align(center, text(
-    font: body-font,
     1em,
     weight: "semibold",
     if lang == "de" [Zusammenfassung] else [Abstract],

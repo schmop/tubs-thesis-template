@@ -1,9 +1,9 @@
-#import "./lib/components.typ": body-font, sans-font, small-heading, number-until-with, variable-pagebreak, author-fullname
+#import "./lib/components.typ": small-heading, number-until-with, variable-pagebreak, author-fullname
 #import "./lib/titlepage.typ": titlepage
-#import "./lib/abstract.typ": abstract
+#import "./lib/abstract.typ": tu-abstract
 #import "./lib/disclaimer.typ": disclaimer
 
-#let tu-braunschweig-thesis(title: "", author: none, lang: "en", is-doublesided: none, body) = {
+#let tu-braunschweig-thesis(title: "", author: none, lang: "en", is-doublesided: none, body-font: "NexusSerifPro", sans-font: "NexusSansPro", body) = {
   set document(title: title, author: author-fullname(author))
   set page(
     margin: (left: 30mm, right: 30mm, top: 27mm, bottom: 27mm),
@@ -30,7 +30,7 @@
   // Apply custom numbering to headings
   set heading(numbering: number-until-with(3, "1.1"))
 
-  show heading: set block(below: 1.5em)
+  show heading: set block(below: 1.2em)
 
   // Make nested headings apply small-heading style
   show heading.where(level: 4) : small-heading()
@@ -43,7 +43,7 @@
   
   set par(
     justify: true,
-    leading: 0.75em, // Set the space between lines in text
+    leading: 0.6em, // Set the space between lines in text
     first-line-indent: 1em,
   )
 
@@ -74,12 +74,13 @@
       show regex("\d"): set text(maroon)
       it
   }
+  let linkblue = rgb(0,50,160)
   show link: it => {
-    show regex("^https?://.*"): set text(blue)
+    show regex("^https?://.*"): set text(linkblue)
     it
   }
-  show footnote: set text(blue)
-  show footnote: set text(blue)
+  show footnote: set text(linkblue)
+  show footnote: set text(linkblue)
 
   body
 }

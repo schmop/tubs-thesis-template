@@ -1,8 +1,3 @@
-// #let body-font = "New Computer Modern"
-// #let sans-font = "New Computer Modern Sans"
-#let body-font = "NexusSerifPro"
-#let sans-font = "NexusSansPro"
-
 // This numbering function cuts of the first levels of a heading
 // This is useful if the structure gets too deep
 // Example with max-level = 3: [1.2.3.4.5.] → [4.5.]

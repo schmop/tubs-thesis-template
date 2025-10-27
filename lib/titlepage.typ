@@ -1,4 +1,4 @@
-#import "components.typ": author-fullname, sans-font, variable-pagebreak
+#import "components.typ": author-fullname, variable-pagebreak
 
 #let titlepage(
   title: "",
@@ -14,6 +14,7 @@
   header-logo: none,
   is-doublesided: none,
   lang: "en",
+  sans-font: "NexusSansPro",
 ) = {
   set page(numbering: none)
 
@@ -28,7 +29,7 @@
   v(15mm)
 
   block(inset: 2cm)[
-    #par(leading: 0.6em)[
+    #par(leading: 1em)[
       #text(font: sans-font, 2.5em, weight: 700, title)
     ]
     #v(1em)
@@ -58,13 +59,14 @@
         Supervisor:
       ]),
       supervisor,
-
-      strong(if (lang == "de") [
+      ..if (second-supervisor != none) {
+      (strong(if (lang == "de") [
         Zweitgutachter:
       ] else [
         Second Supervisor:
       ]),
-      second-supervisor,
+      second-supervisor,)
+      },
 
       strong(if (lang == "de") [
         Matrikelnummer:
