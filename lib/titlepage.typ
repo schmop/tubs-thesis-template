@@ -4,7 +4,7 @@
   title: "",
   document-type: "",
   supervisor: "",
-  second-supervisor: "",
+  second-supervisor: none,
   advisors: (),
   author: none,
   city: none,
