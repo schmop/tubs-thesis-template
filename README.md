@@ -1,5 +1,13 @@
 # TU Braunschweig typst thesis template
 
+---
+## !Attention! Repository is archived!
+
+This repository was merged with [IBR-VSS/tubs-typst](https://github.com/IBR-VSS/tubs-typst) to create a larger database for typst templates in the TU-Braunschweig corporate design.
+Please go over there for a newer version, issues or pull-requests.
+
+---
+
 This is the [Typst](https://typst.app/) template for a thesis that adheres to the [Corporate Design der TU Braunschweig](https://www.tu-braunschweig.de/presse/corporate-design).
 
 ![Preview of the template in action](thumbnail.png)
